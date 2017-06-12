@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ExternalTest\ExternalTest.csproj" />
     <ProjectReference Include="..\TrueNorth.CRM.Common\TrueNorth.CRM.Common.csproj" />
     <ProjectReference Include="..\TrueNorth.CRM.Common\TrueNorth.HIS.SMC.CRM.Common.csproj" />
   </ItemGroup>

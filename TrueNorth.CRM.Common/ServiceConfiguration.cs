@@ -18,7 +18,7 @@ namespace TrueNorth.CRM.Common
         {
             ServicePointManager.ServerCertificateValidationCallback += ValidateRemoteCertificate;
             service.AddScoped( (s) => OrganizationServiceFactory.Create(crmConnectionString));
-            if (!string.IsNullOrEmpty(dllSearchPatern)) addAllDlls(service, () => OrganizationServiceFactory.Create(crmConnectionString) );
+            if (!string.IsNullOrEmpty(dllSearchPatern)) addAllDlls(service, () => OrganizationServiceFactory.Create(crmConnectionString),dllSearchPatern );
             addMyServices(service, () => OrganizationServiceFactory.Create(crmConnectionString));
 
 
@@ -54,18 +54,18 @@ namespace TrueNorth.CRM.Common
         public static void AddCrm(this IServiceCollection service, Func<IOrganizationService> crmserviceFactory, string dllSearchPatern = null)
         {
             service.AddScoped((s) => crmserviceFactory.Invoke());
-            if (!string.IsNullOrEmpty(dllSearchPatern)) addAllDlls(service, crmserviceFactory);
+            if (!string.IsNullOrEmpty(dllSearchPatern)) addAllDlls(service, crmserviceFactory,dllSearchPatern);
             addMyServices(service,crmserviceFactory);
         }
         private static void addCrm(IServiceCollection service)
         {
 
         }
-        private static void addAllDlls(IServiceCollection service, Func<IOrganizationService> crmserviceFactory)
+        private static void addAllDlls(IServiceCollection service, Func<IOrganizationService> crmserviceFactory,string searchPatern)
         {
             string path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             var crmservicetype = typeof(CRMService);
-            foreach (var assemblyName in  Directory.EnumerateFiles(AppDomain.CurrentDomain.BaseDirectory,"*.dll"))
+            foreach (var assemblyName in  Directory.EnumerateFiles(AppDomain.CurrentDomain.BaseDirectory, searchPatern))
             {
                 try
                 {

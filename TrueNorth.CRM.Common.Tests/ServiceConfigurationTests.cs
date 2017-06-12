@@ -2,6 +2,8 @@ using System;
 using Xunit;
 using TrueNorth.CRM.Common;
 using Microsoft.Extensions.DependencyInjection;
+using System.Linq;
+using ExternalTest;
 
 namespace TrueNorth.HIS.SMC.CRM.Common.Tests
 {
@@ -15,6 +17,18 @@ namespace TrueNorth.HIS.SMC.CRM.Common.Tests
             var Services = services.BuildServiceProvider();
             var mycrmservice = Services.GetService<MyCRMService>();
             Assert.NotNull(mycrmservice);
+        }
+
+        [Fact]
+        public void CreateExternalCRMService()
+        {
+            IServiceCollection services = new ServiceCollection();
+            services.AddCrm(() => null);
+            var Services = services.BuildServiceProvider();
+            Assert.False(services.Where((w) => w.ServiceType?.Name == "External").Any());
+            services.AddCrm(() => null,"*.dll");
+            Assert.True(services.Where((w) => w.ServiceType?.Name == "External").Any());
+
         }
     }
 
