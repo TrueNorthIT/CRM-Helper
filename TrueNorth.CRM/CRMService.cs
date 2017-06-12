@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TrueNorth.CRM.Common
+namespace TrueNorth.CRM
 {
     public abstract class CRMService
     {

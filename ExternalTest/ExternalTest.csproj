@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TrueNorth.CRM.Common\TrueNorth.CRM.Common.csproj" />
+    <ProjectReference Include="..\TrueNorth.CRM\TrueNorth.CRM.csproj" />
   </ItemGroup>
 
 </Project>

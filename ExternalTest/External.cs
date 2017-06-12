@@ -1,5 +1,5 @@
 ﻿using System;
-using TrueNorth.CRM.Common;
+using TrueNorth.CRM;
 
 namespace ExternalTest
 {

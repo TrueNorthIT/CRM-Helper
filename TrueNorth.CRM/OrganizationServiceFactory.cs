@@ -2,7 +2,7 @@
 using Microsoft.Xrm.Client.Services;
 using Microsoft.Xrm.Sdk;
 
-namespace TrueNorth.CRM.Common
+namespace TrueNorth.CRM
 {
     public static class OrganizationServiceFactory
     {

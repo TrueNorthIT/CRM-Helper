@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26228.4
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrueNorth.CRM.Common", "TrueNorth.CRM.Common\TrueNorth.CRM.Common.csproj", "{623F6E91-4CD1-4706-8C11-33E68EB9C84A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrueNorth.CRM", "TrueNorth.CRM\TrueNorth.CRM.csproj", "{623F6E91-4CD1-4706-8C11-33E68EB9C84A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrueNorth.CRM.Common.Tests", "TrueNorth.CRM.Common.Tests\TrueNorth.CRM.Common.Tests.csproj", "{450DC4F4-1C4C-4216-9929-490155EB67B9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrueNorth.CRM.Tests", "TrueNorth.CRM.Tests\TrueNorth.CRM.Tests.csproj", "{450DC4F4-1C4C-4216-9929-490155EB67B9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExternalTest", "ExternalTest\ExternalTest.csproj", "{EC7E808C-3478-475B-8611-0C4DB41FCFC8}"
 EndProject

@@ -3,14 +3,14 @@ using System.Net.Security;
 using System.Security.Cryptography.X509Certificates;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Xrm.Sdk;
-using TrueNorth.CRM.Common;
+using TrueNorth.CRM;
 using System;
 using System.Reflection;
 using System.Diagnostics;
 using System.Linq;
 using System.IO;
 
-namespace TrueNorth.CRM.Common
+namespace TrueNorth.CRM
 {
     public static class ServiceCollectionServiceExtensions
     {

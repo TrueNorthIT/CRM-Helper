@@ -1,11 +1,11 @@
 using System;
 using Xunit;
-using TrueNorth.CRM.Common;
+using TrueNorth.CRM;
 using Microsoft.Extensions.DependencyInjection;
 using System.Linq;
 using ExternalTest;
 
-namespace TrueNorth.HIS.SMC.CRM.Common.Tests
+namespace TrueNorth.CRM.Tests
 {
     public class ServiceConfigurationTests
     {
