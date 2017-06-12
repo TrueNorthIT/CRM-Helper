@@ -20,6 +20,10 @@ namespace TrueNorth.HIS.SMC.CRM.Common.Tests
 
     public class MyCRMService : CRMService
     {
-
+        public void Example()
+        {
+            // CRM Service
+            //service.Execute();
+        }
     }
 }
